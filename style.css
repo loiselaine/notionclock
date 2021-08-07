@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  background: #9172B7;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  position: relative;
+}
+.clock:before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  width: 3%;
+  height: 12%;
+  background: #CE81A5;
+  left: 0;
+  right: 0;
+  top: -10%;
+  z-index: -1;
+  transform: rotate(10deg);
+}
+.clock:after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  width: 8%;
+  height: 16%;
+  background: #CE81A5;
+  left: 0;
+  right: 15%;
+  top: -10%;
+  z-index: -1;
+  transform: rotate(-40deg);
+  border-radius: 100% 30% 50% 0;
+}
+
+.middle1 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  height: 5%;
+  background: #7c57a9;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.middle {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  height: 5%;
+  background: #7753a3;
+  border-radius: 50%;
+}
+.middle:before {
+  content: "";
+  position: absolute;
+  background: #8968b2;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  left: 400%;
+  top: 150%;
+  box-shadow: -20vmin -10vmin 0 0 #8968b2, -10vmin -24vmin 0 0 #8968b2, 4vmin 10vmin 0 0 #8968b2, -20vmin 14vmin 0 0 #8968b2, -30vmin 4vmin 0 0 #8968b2;
+}
+.middle:after {
+  content: "";
+  position: absolute;
+  background: #8968b2;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  left: 400%;
+  top: 150%;
+  box-shadow: -26vmin -16vmin 0 0 #8968b2, 6vmin -14vmin 0 0 #8968b2, -10vmin 8vmin 0 0 #8968b2, -4vmin 18vmin 0 0 #8968b2, 12vmin -5vmin 0 0 #8968b2;
+}
+
+.hour, .second, .minute {
+  position: absolute;
+  margin: auto;
+  left: 49%;
+  bottom: 50%;
+  background: #46315f;
+  width: 2%;
+  height: 40%;
+  transform: rotate(0);
+  transform-origin: 50% 100%;
+}
+
+.minute {
+  transform: rotate(0);
+  height: 48%;
+  background: #5e4281;
+}
+
+.second {
+  background: #ab94c8;
+  width: 1%;
+  left: 49.5%;
+  transform: rotate(0);
+  height: 48%;
+}
